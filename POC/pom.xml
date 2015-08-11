@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                              http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ks</groupId>
+    <artifactId>parent-project</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <name>Multi Chapter Simple Parent Project</name>
+
+    <modules>
+        <module>login</module>
+        <module>web</module>
+  </modules>
+	<properties>
+		<buildNumber>1.0.0</buildNumber>
+		<server_name>default</server_name>
+		<java.version>1.6</java.version>
+		<maven-compiler-plugin>1.6</maven-compiler-plugin>
+		
+		<org.springframework-version>4.0.3.RELEASE</org.springframework-version>
+		<org.springsecurity-version>3.2.4.RELEASE</org.springsecurity-version>
+		<org.aspectj-version>1.7.4</org.aspectj-version>
+		<org.slf4j-version>1.7.5</org.slf4j-version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
+		<jackson.version>2.0.0</jackson.version>
+		<tiles-version>3.0.3</tiles-version>
+	</properties>
+	
+	
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+	
+	 <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
